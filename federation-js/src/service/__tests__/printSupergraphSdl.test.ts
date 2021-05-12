@@ -18,7 +18,7 @@ describe('printSupergraphSdl', () => {
     }
   });
 
-  it('composes without errors', () => {
+  fit('composes without errors', () => {
     expect(errors).toBeUndefined();
   });
 
