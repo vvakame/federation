@@ -78,8 +78,6 @@ export const federationDirectives = [
   ExternalDirective,
   RequiresDirective,
   ProvidesDirective,
-  InaccessibleDirective,
-  TagDirective,
 ];
 
 export const appliedDirectives = [InaccessibleDirective, TagDirective];
