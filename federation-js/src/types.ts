@@ -98,12 +98,12 @@ export const entitiesField: GraphQLFieldConfig<any, any> = {
         );
       }
 
-      if (info.cacheControl && info.cacheControl.cacheHint.replace) {
+      if (info.cacheControl?.cacheHint?.restrict) {
         const cacheHint: CacheHint | undefined =
           info.cacheControl.cacheHintFromType(type);
 
-        if (cacheHint) {
-          info.cacheControl.cacheHint.replace(cacheHint);
+        if (cacheHint?.maxAge || cacheHint?.scope) {
+          info.cacheControl.cacheHint.restrict(cacheHint);
         }
       }
 
